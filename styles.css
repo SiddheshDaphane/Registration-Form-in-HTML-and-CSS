@@ -1,0 +1,97 @@
+body {
+  width: 100%;
+  height: 100vh; 
+  /* The height: 100vh; rule ensures that the height of the body element is set 
+  to 100% of the viewport height, effectively taking up the entire vertical space 
+  of the browser window. This can be useful for creating full-height layouts or 
+  sections on a webpage. */
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1, p {
+  margin: 1em auto;
+  /* margin: 1em;: This sets the top and bottom margins of the h1 and p elements 
+  to 1 times the computed value of their respective font-size. If the font-size 
+  of an element is, for example, 16 pixels, then the top and bottom margins would
+  be 16 pixels each. */
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  /* padding: 2rem;: This sets the top and bottom padding of the fieldset element 
+  to 2 times the computed value of the font-size of the root element. If the
+   font-size of the html element is, for example, 16 pixels, then the top and 
+   bottom padding would be 32 pixels each (2 times 16 pixels). */
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+.inline {
+  width: unset;
+  /* In CSS, width: unset; is a property-value pair that sets the 
+  width of an element to its initial value. This means that the width
+   property will be set to the default value that the browser applies 
+   to that particular element. 
+   */
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+.inline{
+  display: inline; 
+}
+
+a {
+  color: #dfdfe2;
+}

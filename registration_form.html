@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> <!-- UTF-8 is a character encoding standard that represents each character in the 
+      Unicode character set using variable-length encoding.-->
+
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="styles.css" /> <!-- Referring CSS file -->
+  </head>
+
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+    <form method="post" action='https://register-demo.freecodecamp.org'> 
+    <!-- The method="post" attribute specifies that the form data will be sent using the HTTP POST method.
+    The action='https://register-demo.freecodecamp.org' attribute specifies the URL to which the form data will be submitted. -->
+
+      <fieldset> <!-- The <fieldset> element is used to group related elements within a form and visually separate them. -->
+        <label for="first-name">Enter Your First Name: <input id="first-name" name="first-name" type="text" required /></label>
+
+        <!-- Each block consists of a <label> element that describes the purpose of the following input field.
+          The for attribute in the <label> element associates it with the corresponding input field using the id attribute.
+          The <input> elements are used to take user input.
+          The name attribute provides a name for the input field, which is used when submitting the form. 
+          The type attribute specifies the type of input (text, email, password). 
+          The required attribute makes sure that the user must fill in the input field before submitting the form. 
+          the name attribute is set to "first-name." This means that when the form is submitted, the data entered by the user into this input field will be associated with the parameter or variable named "first-name."
+          Yes, exactly. The for attribute in the <label> element is used to associate the label with a form element. The value of the for attribute should match the id attribute of the form element you want to associate the label with. This connection helps improve accessibility and user experience.
+        -->
+      
+        <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+        <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+        <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Account type (required)</legend>
+        <label for="personal-account"><input id="personal-account" type="radio" name="account-type" class="inline" checked /> Personal</label>
+        <label for="business-account"><input id="business-account" type="radio" name="account-type" class="inline" /> Business</label>
+      </fieldset>
+      <fieldset>
+        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+        <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+        <label for="referrer">How did you hear about us?
+
+          <select id="referrer" name="referrer"> 
+          <!-- The <select> element creates a dropdown menu. The id attribute is set to "referrer," and the name attribute is set to "referrer," which is used when submitting the form. -->
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+
+        </label>
+        <label for="bio">Provide a bio:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+          <!-- 
+            The <textarea> element is used to create a multiline text input field. The id attribute is set to "bio," and the name attribute is set to "bio," which is used when submitting the form.
+            The rows and cols attributes determine the initial number of rows and columns displayed in the textarea. 
+            The placeholder attribute provides a hint or example text that is displayed in the textarea before the user enters their own text. In this case, it suggests a sample bio.
+          -->
+        </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+      </label>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
